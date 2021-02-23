@@ -1,0 +1,53 @@
+
+.new-new-tweet {
+  display: flex;
+  width: 100%;
+  margin-top: 1em;
+/*   flex-direction: column; */
+} 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#tweet-text {
+ display: flex; 
+ align-content: stretch;
+ border: 0;
+ border-bottom: 5px solid #4056A1;
+ resize: none;
+ width: 100%;
+ background-color: #f4f1ec;
+
+}
+/* try to make the placeholder "sit" at the bottom of the box
+#tweet-text::placeholder {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+.send-tweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+button {
+  display: flex;
+  align-content: flex-start; 
+  background-color: #4056A1;
+  color: #ffffff;
+  font-family: "Sail", sans-serif;
+  border: none;
+  padding: .35em;
+  margin-top: .2em;
+}
+
+.counter {
+  display: flex;
+  align-content: flex-end;
+  margin-top: .2em;
+  padding: .35em; 
+}
