@@ -1,0 +1,21 @@
+header{
+  background-color: #e4eff3;
+  background-image: url("../images/arches.png") ;
+  height: 400px;
+  padding: .5em;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  display: flex;
+  align-content: center;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
