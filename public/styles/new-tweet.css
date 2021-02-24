@@ -51,3 +51,7 @@ button {
   margin-top: .2em;
   padding: .35em; 
 }
+
+.counter-red {
+  color: red;
+}
