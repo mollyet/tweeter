@@ -1,93 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter -  Social Media for Birds</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Social Media for Birds</title>
 
-    <!-- Custom Fonts: -->
-    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Sail&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- Custom Fonts: -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Sail&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+    rel="stylesheet">
 
-    <!-- Navigation CSS -->
-    <link rel = "stylesheet" href ="/styles/nav.css" type= "text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- Header CSS -->
-    <link rel= "stylesheet" href ="/styles/header.css" type = "text/css" />
+  <!-- Navigation CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- New Tweet CSS -->
-    <link rel= "stylesheet" href = "/styles/new-tweet.css" type ="text/css" />
-    
-    <!-- Exisitng Tweet CSS -->
-    <link rel = "stylesheet" href = "/styles/tweet.css" type = "text/css" />
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- New Tweet CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- Char Counter JS -->
-    <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+  <!-- Exisitng Tweet CSS -->
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class = "tweeter">Tweeter</span>
-      <span class = "new-tweet"><b>Write </b> a new tweet</span>
-    </nav>
-    <header>
-      <div class = "avatar">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class ="name">
-          <h2>Big Horned Owl</h2>
-      </div>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Char Counter JS -->
+  <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span class="tweeter">Tweeter</span>
+    <span class="write-tweet"><b>Write </b> a new tweet</span>
+  </nav>
+  <header id="page-header">
+    <div class="avatar">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div class="name">
+      <h2>Big Horned Owl</h2>
+    </div>
   </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action= "/tweets/" method = "POST">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?" ></textarea>
-          <div class="send-tweet">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div
-        </form>
-      </section>
-      <section class = "tweet-container">
-        <article >
-          <!-- <header class ="tweet-header" > -->
-          <!-- <header> -->
-            <div class ="tweet-header">
-            <span class = "author"><img src ="/images/avatar-granny-small.png">Corvus Culminatus</span>
-            <span class = "author-handle">@junglecrow</span>
-          </div>
-          <!-- </header> -->
-          <div class = "tweet">
-            I am memeber of the #corvid family and sometimes my feathers look purple. 
-          </div>
-          <!-- <footer class = "tweet-footer"> -->
-          <!-- <footer> -->
-            <div class = "tweet-footer">
-              <!-- need to use proper tade tracker && those cute little retweet/etc buttons from font awesome -->
-            <span class = "date">today</span>
-            <span class = "icons">retrweet</span>
-          </div>
-          <!-- </footer> -->
-        </article>
-      </section>
-    </main>
-    <footer>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet-form">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets/" method="POST">
+        <!-- <label for="tweet-text">What are you humming about?</label> -->
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <div class="send-tweet">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    <section class="tweet-container">
+      <article>
+       
+        <header class="tweet-header" >
+          <span class="author"><span class="author-avatar"> <img src="/images/avatar-granny-small.png"> </span>Corvus Culminatus</span>
+          <span class="author-handle">@junglecrow</span>
+        </span>
+        </header>
+        <div class="tweet">
+          I am memeber of the #corvid family and sometimes my feathers look purple.
+        </div>
+        <footer class="tweet-footer">
+          <!-- need to use proper tade tracker && those cute little retweet/etc buttons from font awesome -->
+          <span class="date">today</span>
+          <span class="icons">retrweet</span>
+        </footer>
+      </article>
+    </section>
+  </main>
+  <footer>
 
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>

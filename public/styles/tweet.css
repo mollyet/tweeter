@@ -9,7 +9,7 @@
 }
 /*  these need to hover together, they don't? */
 .tweet-container:hover {
-  box-shadow: 5px 5px aqua;
+  box-shadow: 5px 5px rgb(173, 173, 173);
 
 }
 .author-handle:hover {
@@ -20,7 +20,7 @@
 article {
   display: flex;
   flex-direction: column;
-  
+  color: black;
 }
 
 .tweet {
@@ -40,6 +40,15 @@ article {
   padding: 1em;
 
 }
+ .author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ }
+ .author-handle {
+   display: flex;
+   align-items: center;
+ }
 
 .tweet-footer {
   display: flex;
@@ -49,16 +58,6 @@ article {
   font-size: small;
 }
 
-/* these seem reduntant but they are not */
-
-.author {
-  color: black;
-}
-
-
-.date {
-  color: black;
-}
 .icons {
   color: #4056A1;
 }

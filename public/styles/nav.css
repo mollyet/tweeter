@@ -11,7 +11,7 @@ nav {
   top: 0;
   width: 100%;
 }
-span {
+nav span {
   color: #ffffff;
 }
 .tweeter {
@@ -19,6 +19,6 @@ span {
   font-size: xx-large;
 }
 
-.new-tweet {
+nav .write-tweet {
 font-size: large;
 }

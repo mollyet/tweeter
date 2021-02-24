@@ -1,24 +1,15 @@
 /* 
 background image from: https://www.transparenttextures.com/ , pattern: arches
 */
-header{
+header#page-header{
   background-color: #e4eff3;
   background-image: url("../images/arches.png") ;
   height: 400px;
   padding: .5em;
 }
 
-div {
+header#page-header div.avatar, header#page-header div.name {
   display: flex;
   justify-content: center;
 }
 
-.avatar {
-  display: flex;
-  align-content: center;
-}
-
-.name {
-  display: flex;
-  align-items: center;
-}
