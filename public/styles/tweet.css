@@ -1,0 +1,64 @@
+.tweet-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1em;
+  border: 5px solid grey;
+  padding: 1em;
+
+}
+/*  these need to hover together, they don't? */
+.tweet-container:hover {
+  box-shadow: 5px 5px aqua;
+
+}
+.author-handle:hover {
+  color: black;
+}
+
+
+article {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.tweet {
+ display: flex;
+ justify-content: flex-start;
+ border: 0;
+ border-bottom: 5px solid grey;
+ padding: 1em;
+}
+
+/* these should not be divs, could not properly chain tags to override existing header info */
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+
+}
+
+.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  font-size: small;
+}
+
+/* these seem reduntant but they are not */
+
+.author {
+  color: black;
+}
+
+
+.date {
+  color: black;
+}
+.icons {
+  color: #4056A1;
+}
