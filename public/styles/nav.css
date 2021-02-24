@@ -6,8 +6,10 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline
-
+  align-items: baseline;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 span {
   color: #ffffff;
