@@ -1,4 +1,4 @@
-.tweet-container{
+.tweet{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,7 +8,7 @@
 
 }
 /*  these need to hover together, they don't? */
-.tweet-container:hover {
+.tweet:hover {
   box-shadow: 5px 5px rgb(173, 173, 173);
 
 }
@@ -23,7 +23,7 @@ article {
   color: black;
 }
 
-.tweet {
+.tweet-content {
  display: flex;
  justify-content: flex-start;
  border: 0;
