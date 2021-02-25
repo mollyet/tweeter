@@ -8,9 +8,9 @@
  * temp. tweet obj. 
  * will be getting Real Tweet obj from an AJAX GET request, but for now
  * directly pulled from initial-tweets.json
+ * 
+ * 
  */
-
-
 //
 
 $(document).ready(function () {
@@ -29,6 +29,7 @@ $(document).ready(function () {
     .then(function () {
         console.log(localdata)
         console.log("success!");
+        
         loadNewTweet(localdata);
         $('#tweet-text').val("")
       });
@@ -66,8 +67,7 @@ $(document).ready(function () {
     // tweet in html format, then append to tweet constainer class
     //use `template literals` to put variables in tweet data
     //  return `<tag class="class-name"> ${tweet.user.name} </tag>`;
-    
-
+    const safeHTML = `<p>${escape(tweet.content.text)}<p>`
     const $tweet = `
   
     <article class = "tweet">
@@ -82,7 +82,7 @@ $(document).ready(function () {
       </span>
       </header>
       <div class="tweet-content">
-        ${tweet.content.text}
+        ${safeHTML}
       </div>
       <footer class="tweet-footer">
         <!-- need to use proper tade tracker && those cute little retweet/etc buttons from font awesome -->
@@ -93,6 +93,11 @@ $(document).ready(function () {
     return $tweet;
   };
 
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
 });
 
