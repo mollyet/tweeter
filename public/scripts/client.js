@@ -29,10 +29,21 @@ $(document).ready(function () {
     .then(function () {
         console.log(localdata)
         console.log("success!");
+        loadNewTweet(localdata);
+        $('tweet-text').trigger("reset")
       });
     } 
   });
   //
+  const loadNewTweet = function (data) {
+    $.ajax('/tweets', { method: "GET" })
+      .then(function(data) {
+        renderTweets(data)
+        console.log('new tweet loaded, success!', data)
+      });
+  };
+
+
 
   const loadTweets = function () {
     $.ajax('/tweets', { method: "GET" })
@@ -47,7 +58,7 @@ $(document).ready(function () {
 
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
-      $(".tweet-container").append(createTweetElement(tweet));
+      $(".tweet-container").prepend(createTweetElement(tweet));
     }
   };
   const createTweetElement = function (tweet) {
@@ -82,7 +93,6 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  // renderTweets(data);
 
 });
 
