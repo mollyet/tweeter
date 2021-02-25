@@ -14,21 +14,14 @@
 //
 
 $(document).ready(function () {
-
-
-  // const $button = $('#post-tweet');
-  // $button.on('click', function () {
-  //   console.log('Button clicked, performing ajax call...');
-  //   $.ajax('index.html', { method: 'POST' })
-  // .then(function () {
-  //   console.log('Success: ', );
-  // });
-  // });
   $('form').submit(function (event) {
     event.preventDefault();
-    if ($(this).length > 140) {
+    
+    // checks if tweet is a valid tweet 
+
+    if ($("#tweet-text").val().length > 140) {
       alert("tweet is too long!")
-    } else if ($(this) === null){
+    } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0){
       alert("tweet can't be empty!")
     } else {
     const localdata = $(this).serialize();
