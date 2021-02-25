@@ -29,21 +29,23 @@ $(document).ready(function () {
     .then(function () {
         console.log(localdata)
         console.log("success!");
-        
-        loadNewTweet(localdata);
+        //somehow remove all the tweets before loading the tweets in 
+        $(".tweet").remove();
+        loadTweets();
         $('#tweet-text').val("")
+        //write event listener to listen for value change ? 
+        $(".counter").text(140)
       });
     } 
   });
   //
-  const loadNewTweet = function (data) {
-    $.ajax('/tweets', { method: "GET" })
-      .then(function(data) {
-        renderTweets(data)
-        console.log('new tweet loaded, success!', data)
-      });
-  };
-
+  // const loadNewTweet = function (data) {
+  //   $.ajax('/tweets', { method: "GET" })
+  //     .then(function(data) {
+  //       renderTweets(data)
+  //       console.log('new tweet loaded, success!', data)
+  //     });
+  // };
 
 
   const loadTweets = function () {

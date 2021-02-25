@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#tweet-text").on("input", function (e) {
+  $("#tweet-text").on("input" , function (e) {
     const $counter = $(this).parent().find(".counter");
     const tweetLength = 140 - $(this).val().length;
     $counter.val(tweetLength);
@@ -9,5 +9,6 @@ $(document).ready(function () {
       $counter.removeClass("counter-red")
     }
   });
+  
 });
 
