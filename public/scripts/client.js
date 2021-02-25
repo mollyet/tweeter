@@ -30,7 +30,7 @@ $(document).ready(function () {
         console.log(localdata)
         console.log("success!");
         loadNewTweet(localdata);
-        $('tweet-text').trigger("reset")
+        $('#tweet-text').val("")
       });
     } 
   });
