@@ -26,11 +26,18 @@ $(document).ready(function () {
   // });
   $('form').submit(function (event) {
     event.preventDefault();
+    if ($(this).length > 140) {
+      alert("tweet is too long!")
+    } else if ($(this) === null){
+      alert("tweet can't be empty!")
+    } else {
     const localdata = $(this).serialize();
     $.ajax('/tweets', { method: 'POST', data: localdata })
-      .then(function () {
+    .then(function () {
+        console.log(localdata)
         console.log("success!");
       });
+    } 
   });
   //
 
@@ -55,6 +62,8 @@ $(document).ready(function () {
     // tweet in html format, then append to tweet constainer class
     //use `template literals` to put variables in tweet data
     //  return `<tag class="class-name"> ${tweet.user.name} </tag>`;
+    
+
     const $tweet = `
   
     <article class = "tweet">
