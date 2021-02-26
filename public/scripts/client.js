@@ -52,13 +52,8 @@ $(document).ready(function () {
     }
   };
   const createTweetElement = function (tweet) {
-    //create DOM to fill in info like in index.html
-    // tweet in html format, then append to tweet constainer class
-    //use `template literals` to put variables in tweet data
-    //  return `<tag class="class-name"> ${tweet.user.name} </tag>`;
     const safeHTML = `<p>${escape(tweet.content.text)}<p>`;
     const $tweet = `
-  
     <article class = "tweet">
       <header class="tweet-header" >
         <span class="author">
@@ -74,9 +69,8 @@ $(document).ready(function () {
         ${safeHTML}
       </div>
       <footer class="tweet-footer">
-        <!-- need to use proper tade tracker && those cute little retweet/etc buttons from font awesome -->
         <span class="date">${tweet.created_at}</span>
-        <span class="icons">retrweet</span>
+        <span class="icons"><i class="fas fa-crow"></i></span>
       </footer>
     </article>`;
     return $tweet;

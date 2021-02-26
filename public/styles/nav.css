@@ -2,7 +2,7 @@ nav {
   background-color: #4056A1;
   font-family: "Source Sans Pro", sans-serif;
   height: 120px;
-  padding: 1.5em;
+  padding: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,10 +15,18 @@ nav span {
   color: #ffffff;
 }
 .tweeter {
+  display: flex;
+  flex-direction: column;
   font-family: "Sail", cursive;
-  font-size: xx-large;
+  font-size: xxx-large;
 }
-
+.tweeter-sub {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: medium;
+}
+.write-tweet {
+  font-family: "Source Sans Pro", sans-serif;
+}
 nav .write-tweet {
 font-size: large;
 }
