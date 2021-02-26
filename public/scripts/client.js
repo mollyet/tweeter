@@ -4,13 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-/*
- * temp. tweet obj. 
- * will be getting Real Tweet obj from an AJAX GET request, but for now
- * directly pulled from initial-tweets.json
- * 
- * 
- */
 //
 
 $(document).ready(function () {
@@ -20,33 +13,29 @@ $(document).ready(function () {
     // checks if tweet is a valid tweet 
 
     if ($("#tweet-text").val().length > 140) {
-      alert("tweet is too long!")
+      $(".error").append(errMessage("too long"))
+      
+      // alert("tweet is too long!")
     } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0){
-      alert("tweet can't be empty!")
+      // alert("tweet can't be empty!")
+      $(".error").append(errMessage("null"));
     } else {
     const localdata = $(this).serialize();
     $.ajax('/tweets', { method: 'POST', data: localdata })
     .then(function () {
         console.log(localdata)
         console.log("success!");
-        //somehow remove all the tweets before loading the tweets in 
+        //removes old tweets and then reloads tweets 
         $(".tweet").remove();
         loadTweets();
         $('#tweet-text').val("")
-        //write event listener to listen for value change ? 
+        //hard "resets" the counter back to 140
         $(".counter").text(140)
       });
     } 
   });
-  //
-  // const loadNewTweet = function (data) {
-  //   $.ajax('/tweets', { method: "GET" })
-  //     .then(function(data) {
-  //       renderTweets(data)
-  //       console.log('new tweet loaded, success!', data)
-  //     });
-  // };
-
+ 
+  // 
 
   const loadTweets = function () {
     $.ajax('/tweets', { method: "GET" })
@@ -99,6 +88,17 @@ $(document).ready(function () {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
+  }
+
+  const errMessage = function(msg) {
+    let $error = ``;
+    if (msg === "too long") {
+      $error = `<p class ="err">Sorry! This tweet is too long! Please Try Again</p>`
+    }
+    if (msg === "null") {
+      $error = `<p class= "err">Sorry! You can't tweet an empty tweet. Please try again.</p>`
+    }
+    return $error;
   }
 
 });
