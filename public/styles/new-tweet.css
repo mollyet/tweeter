@@ -5,7 +5,6 @@
   justify-content: center;
   width: 100%;
   margin-top: 1em;
-/*   flex-direction: column; */
 } 
 form {
   display: flex;
@@ -25,12 +24,6 @@ align-items: center;
  background-color: #f4f1ec;
 
 }
-/* try to make the placeholder "sit" at the bottom of the box
-#tweet-text::placeholder {
-  display: flex;
-  justify-content: flex-end;
-} */
-
 .send-tweet {
   display: flex;
   flex-direction: row;

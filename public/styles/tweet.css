@@ -7,7 +7,6 @@
   padding: 1em;
 
 }
-/*  these need to hover together, they don't? */
 .tweet:hover {
   box-shadow: 5px 5px rgb(173, 173, 173);
 

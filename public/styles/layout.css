@@ -27,11 +27,23 @@ body {
  */
 
  main {
-  /*   background-color:aqua; */
     display: flex;
     flex-direction: column;
-/*     justify-content: stretch; */
     align-items: center stretch;
     margin: .5rem;
     width: 90%;
   }
+
+
+/* 
+this doesn't work well-- will attempt to fix if needed
+ @media (min-width: 1024px ){
+   main {
+     background-color: aqua;
+     width: 80%;
+     align-items: flex-end;
+
+   }
+   
+ }
+ */
