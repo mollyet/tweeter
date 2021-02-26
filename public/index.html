@@ -30,6 +30,9 @@
   <!-- Exisitng Tweet CSS -->
   <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
+  <!-- Form Error CSS -->
+  <link rel="stylesheet" href="/styles/error.css" type="text/css" />
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -57,7 +60,7 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class= "error"></section>
+    <div class= "error" id="error-message"></div>
     <section class="new-tweet-form">
       <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">

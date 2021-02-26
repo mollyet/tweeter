@@ -9,39 +9,37 @@
 $(document).ready(function () {
   $('form').submit(function (event) {
     event.preventDefault();
-    
+
     // checks if tweet is a valid tweet 
 
+    console.log($("#tweet-text").val().length);
     if ($("#tweet-text").val().length > 140) {
-      $(".error").append(errMessage("too long"))
-      
-      // alert("tweet is too long!")
-    } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0){
-      // alert("tweet can't be empty!")
-      $(".error").append(errMessage("null"));
+      $('#error-message').text(errMessage("too long")).slideDown();
+    } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0) {
+      $('#error-message').text(errMessage("null")).slideDown();
     } else {
-    const localdata = $(this).serialize();
-    $.ajax('/tweets', { method: 'POST', data: localdata })
-    .then(function () {
-        console.log(localdata)
-        console.log("success!");
-        //removes old tweets and then reloads tweets 
-        $(".tweet").remove();
-        loadTweets();
-        $('#tweet-text').val("")
-        //hard "resets" the counter back to 140
-        $(".counter").text(140)
-      });
-    } 
+      const localdata = $(this).serialize();
+      $.ajax('/tweets', { method: 'POST', data: localdata })
+        .then(function () {
+          console.log("tweet success!");
+          //removes old tweets and then reloads tweets 
+          $(".tweet").remove();
+          loadTweets();
+          $('#tweet-text').val("");
+          //hard "resets" the counter back to 140
+          $("#error-message").slideUp();
+          $(".counter").text(140);
+        });
+    }
   });
- 
+
   // 
 
   const loadTweets = function () {
     $.ajax('/tweets', { method: "GET" })
-      .then(function(tweets) {
-        renderTweets(tweets)
-        console.log('tweets loaded! success!', tweets)
+      .then(function (tweets) {
+        renderTweets(tweets);
+        console.log('tweets loaded! success!', tweets);
       });
   };
   loadTweets();
@@ -58,7 +56,7 @@ $(document).ready(function () {
     // tweet in html format, then append to tweet constainer class
     //use `template literals` to put variables in tweet data
     //  return `<tag class="class-name"> ${tweet.user.name} </tag>`;
-    const safeHTML = `<p>${escape(tweet.content.text)}<p>`
+    const safeHTML = `<p>${escape(tweet.content.text)}<p>`;
     const $tweet = `
   
     <article class = "tweet">
@@ -84,22 +82,27 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  const escape =  function(str) {
+  //
+
+
+  const escape = function (str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
-  const errMessage = function(msg) {
+  // 
+
+  const errMessage = function (msg) {
     let $error = ``;
     if (msg === "too long") {
-      $error = `<p class ="err">Sorry! This tweet is too long! Please Try Again</p>`
+      $error = `Sorry! This tweet is too long! Please Try Again`;
     }
     if (msg === "null") {
-      $error = `<p class= "err">Sorry! You can't tweet an empty tweet. Please try again.</p>`
+      $error = `Sorry! You can't tweet an empty tweet. Please try again.`;
     }
     return $error;
-  }
+  };
 
 });
 
