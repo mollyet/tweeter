@@ -30,3 +30,8 @@ nav span {
 nav .write-tweet {
 font-size: large;
 }
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -49,7 +49,7 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="tweeter">Tweeter<span class = "tweeter-sub">Social Media For Birds.</span></span>
-    <span class="write-tweet"><b>Write </b> a new tweet</span>
+    <span class="write-tweet"><a href="#post-tweet"><b>Write </b></a> a new tweet</span>
   </nav>
   <header id="page-header">
     <div class="avatar">
@@ -61,12 +61,10 @@
       <h2>Felicity Finch</h2>
     </div>
   </header>
-
   <!-- Page-specific (main) content here -->
   <main class="container">
     <div class="error" id="error-message"></div>
     <section class="new-tweet-form">
-      <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">
         <textarea name="text" id="tweet-text" placeholder="Whats Chirping On?"></textarea>
         <div class="send-tweet">
