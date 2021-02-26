@@ -5,10 +5,10 @@
 "Tweeter" is mini Twitter clone created for Lighthouse Labs Web Developer Bootcamp. 
 ## Examples
 
-["Screenshot of header](https://github.com/mollyet/tweeter/blob/master/docs/tweeter-header.png)
+!["Screenshot of header](https://github.com/mollyet/tweeter/blob/master/docs/tweeter-header.png)
 Header of App
 
-["Screenshot of tweet form"](https://github.com/mollyet/tweeter/blob/master/docs/example-tweet.png)
+!["Screenshot of tweet form"](https://github.com/mollyet/tweeter/blob/master/docs/example-tweet.png)
 Field to add a new tweet, shown with a tweet from Lawrence, a seagull. 
 
 ## Getting Started
