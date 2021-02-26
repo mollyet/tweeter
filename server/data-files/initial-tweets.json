@@ -1,24 +1,24 @@
 [
   {
     "user": {
-      "name": "Newton",
+      "name": "Susan Seagull",
       "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "handle": "@laruspacificus"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Every good vacation always has great french fries!"
     },
-    "created_at": 1614121002164
+    "created_at": 1614151650059
   },
   {
     "user": {
-      "name": "Descartes",
+      "name": "A. Hyacinthius",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "handle": "@hyacinth"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "“The only thing I know is that I know nothing” – Socrates"
     },
-    "created_at": 1614207402164
+    "created_at": 1614238050059
   }
 ]
