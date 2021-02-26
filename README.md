@@ -2,7 +2,7 @@
 
 "Tweeter" is a social media app for birds. 
 
-"Tweeter" is mini Twitter clone created for Lighthouse Labs Web Developer Bootcamp. 
+"Tweeter" is mini Twitter clone created for [Lighthouse Labs](https://www.lighthouselabs.ca/) Web Developer Bootcamp. 
 ## Examples
 
 !["Screenshot of header](https://github.com/mollyet/tweeter/blob/master/docs/tweeter-header.png)
